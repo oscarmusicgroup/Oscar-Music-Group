@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    background-color: #0a0e17;
+    @apply text-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-semibold hover:shadow-glow transition-all duration-400 transform hover:scale-105 active:scale-95 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-slate-800 text-slate-100 border border-slate-700 rounded-full font-semibold hover:bg-slate-700 transition-all duration-400 transform hover:scale-105 active:scale-95 cursor-pointer;
+  }
+
+  .btn-tertiary {
+    @apply px-6 py-3 text-slate-100 rounded-full font-semibold border border-slate-600/50 hover:border-slate-400 transition-all duration-400 transform hover:scale-105 active:scale-95 cursor-pointer;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 transition-all duration-500;
+  }
+
+  .section-subtitle {
+    @apply text-slate-400 text-lg max-w-2xl mx-auto transition-colors duration-400;
+  }
+
+  .container-snug {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    @apply bg-slate-900/40 backdrop-blur-md border border-slate-700/40 transition-all duration-400;
+  }
+
+  .card {
+    @apply glass rounded-2xl p-6 hover:border-slate-600/60 transition-all duration-500 hover:shadow-glow hover:-translate-y-1;
+  }
+
+  .icon-wrapper {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .link-hover {
+    @apply transition-all duration-300 ease-out hover:translate-x-1;
+  }
+
+  /* Scroll Reveal Animations */
+  .reveal-hidden {
+    @apply opacity-0;
+  }
+
+  .reveal-visible {
+    @apply opacity-100;
+  }
+
+  /* Slide Up Reveal */
+  .reveal-slide-up {
+    @apply translate-y-16;
+  }
+
+  .reveal-slide-up.reveal-visible {
+    @apply translate-y-0 animate-slide-up;
+  }
+
+  /* Slide Down Reveal */
+  .reveal-slide-down {
+    @apply -translate-y-16;
+  }
+
+  .reveal-slide-down.reveal-visible {
+    @apply translate-y-0 animate-slide-down;
+  }
+
+  /* Slide Left Reveal */
+  .reveal-slide-left {
+    @apply translate-x-16 opacity-0;
+  }
+
+  .reveal-slide-left.reveal-visible {
+    @apply translate-x-0 opacity-100 animate-slide-left;
+  }
+
+  /* Slide Right Reveal */
+  .reveal-slide-right {
+    @apply -translate-x-16 opacity-0;
+  }
+
+  .reveal-slide-right.reveal-visible {
+    @apply translate-x-0 opacity-100 animate-slide-right;
+  }
+
+  /* Fade In Reveal */
+  .reveal-fade-in {
+    @apply opacity-0;
+  }
+
+  .reveal-fade-in.reveal-visible {
+    @apply opacity-100 animate-fade-in;
+  }
+
+  /* Zoom In Reveal */
+  .reveal-zoom-in {
+    @apply scale-90 opacity-0;
+  }
+
+  .reveal-zoom-in.reveal-visible {
+    @apply scale-100 opacity-100 animate-zoom-in;
+  }
+
+  /* Bounce In Reveal */
+  .reveal-bounce {
+    @apply scale-75 opacity-0;
+  }
+
+  .reveal-bounce.reveal-visible {
+    @apply scale-100 opacity-100 animate-bounce-gentle;
+  }
+
+  /* Flip In Reveal */
+  .reveal-flip {
+    @apply opacity-0 perspective;
+    transform: rotateY(90deg);
+  }
+
+  .reveal-flip.reveal-visible {
+    @apply opacity-100 animate-flip-in;
+  }
+
+  /* Stagger effect for multiple elements */
+  .stagger-item {
+    @apply transition-all duration-500;
+  }
+
+  .stagger-item:nth-child(1) {
+    animation-delay: 0ms;
+  }
+
+  .stagger-item:nth-child(2) {
+    animation-delay: 100ms;
+  }
+
+  .stagger-item:nth-child(3) {
+    animation-delay: 200ms;
+  }
+
+  .stagger-item:nth-child(4) {
+    animation-delay: 300ms;
+  }
+
+  .stagger-item:nth-child(5) {
+    animation-delay: 400ms;
+  }
+
+  .stagger-item:nth-child(6) {
+    animation-delay: 500ms;
+  }
+}
+
+/* Loading State */
+.page-loading {
+  @apply animate-pulse;
+}
+
+/* Selection */
+::selection {
+  @apply bg-cyan-500/30 text-cyan-200;
+}
