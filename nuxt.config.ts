@@ -110,7 +110,14 @@ export default defineNuxtConfig({
       reportCompressed: false
     },
     optimizeDeps: {
-      include: ['vue', 'nuxt'],
+      include: [
+        'vue',
+        'nuxt',
+        '@fortawesome/fontawesome-svg-core',
+        '@fortawesome/vue-fontawesome',
+        '@fortawesome/free-solid-svg-icons',
+        '@fortawesome/free-brands-svg-icons'
+      ],
       holdUntilCrawlEnd: true
     },
     server: {
