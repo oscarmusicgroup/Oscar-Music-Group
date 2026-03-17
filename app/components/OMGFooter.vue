@@ -16,11 +16,14 @@
             <a href="https://facebook.com/oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="Facebook">
               <FontAwesomeIcon :icon="['fab', 'facebook']" class="w-5 h-5" />
             </a>
-            <a href="https://twitter.com/oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="Twitter">
-              <FontAwesomeIcon :icon="['fab', 'twitter']" class="w-5 h-5" />
+            <a href="https://discord.gg/qydQNrJD" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="Discord">
+              <FontAwesomeIcon :icon="['fab', 'discord']" class="w-5 h-5" />
             </a>
-            <a href="https://youtube.com/@oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="YouTube">
-              <FontAwesomeIcon :icon="['fab', 'youtube']" class="w-5 h-5" />
+            <a href="https://instagram.com/oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="Instagram">
+              <FontAwesomeIcon :icon="['fab', 'instagram']" class="w-5 h-5" />
+            </a>
+            <a href="https://threads.net/@oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="Threads">
+              <FontAwesomeIcon :icon="['fab', 'threads']" class="w-5 h-5" />
             </a>
             <a href="https://tiktok.com/@oscarmusicgroup" target="_blank" class="text-slate-400 hover:text-cyan-300 transition" aria-label="TikTok">
               <FontAwesomeIcon :icon="['fab', 'tiktok']" class="w-5 h-5" />

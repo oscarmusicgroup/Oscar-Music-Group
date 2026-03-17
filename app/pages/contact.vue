@@ -253,17 +253,17 @@ const faqs = [
 ]
 
 const submitForm = async () => {
+  submitMessage.value = null
   isSubmitting.value = true
   try {
-    // Call API
-    // await $fetch('/api/contact', {
-    //   method: 'POST',
-    //   body: form
-    // })
+    // Call API with a plain object copy of the form
+    const response = await $fetch<{ message: string }>('/api/contact', {
+      method: 'POST',
+      body: { ...form }
+    })
     
-    // For demo purposes
     submitMessage.value = {
-      text: 'Cảm ơn! Chúng tôi sẽ liên hệ bạn sớm.',
+      text: response.message || 'Cảm ơn! Chúng tôi sẽ liên hệ bạn sớm.',
       type: 'success'
     }
     
@@ -273,9 +273,10 @@ const submitForm = async () => {
     form.artistName = ''
     form.subject = ''
     form.message = ''
-  } catch (error) {
+  } catch (error: any) {
+    console.error('Submit error:', error)
     submitMessage.value = {
-      text: 'Có lỗi xảy ra. Vui lòng thử lại sau.',
+      text: error.data?.statusMessage || 'Có lỗi xảy ra. Vui lòng thử lại sau hoặc gửi mail trực tiếp.',
       type: 'error'
     }
   } finally {

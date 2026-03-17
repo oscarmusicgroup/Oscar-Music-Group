@@ -11,9 +11,9 @@ export const APP_URL = 'https://oscarmusicgroup.vn'
  */
 export const SOCIAL_LINKS = {
   facebook: 'https://facebook.com/oscarmusicgroup',
-  twitter: 'https://twitter.com/oscarmusicgroup',
+  discord: 'https://discord.gg/oscarmusicgroup',
   instagram: 'https://instagram.com/oscarmusicgroup',
-  youtube: 'https://youtube.com/@oscarmusicgroup',
+  threads: 'https://threads.net/@oscarmusicgroup',
   tiktok: 'https://tiktok.com/@oscarmusicgroup',
 }
 

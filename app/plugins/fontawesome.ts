@@ -78,7 +78,9 @@ import {
   faItunesNote,
   faGooglePlay,
   faAudible,
-  faPaypal
+  faPaypal,
+  faDiscord,
+  faThreads
 } from '@fortawesome/free-brands-svg-icons'
 
 // Add all icons to library
@@ -156,7 +158,9 @@ library.add(
   faItunesNote,
   faGooglePlay,
   faAudible,
-  faPaypal
+  faPaypal,
+  faDiscord,
+  faThreads
 )
 
 export default defineNuxtPlugin((nuxtApp) => {

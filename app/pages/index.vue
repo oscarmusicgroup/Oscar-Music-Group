@@ -535,6 +535,7 @@
               quote="Oscar Music Group giúp tôi phát hành bài hát lên Zing Mp3 chỉ trong 2 ngày. Rất chuyên nghiệp và uy tín!"
               author="Tú Trinh"
               role="Nhạc sĩ Indie"
+              avatar="/image/TuTrinh.WEBP"
             />
           </div>
           <div v-scroll-reveal="{ animation: 'slide-up', delay: 100 }">
@@ -542,6 +543,7 @@
               quote="Tôi rất impressed với cách họ xử lý metadata và chuẩn hóa mức độ âm thanh theo tiêu chuẩn quốc tế."
               author="Maxon Producer"
               role="Producer"
+              avatar="/image/MaxonProducer.WEBP"
             />
           </div>
           <div v-scroll-reveal="{ animation: 'slide-up', delay: 200 }">
@@ -549,6 +551,7 @@
               quote="Dịch vụ khách hàng xuất sắc. Họ luôn sẵn sàng giúp đỡ khi tôi gặp vấn đề chỉ trong vòng 1-2 ngày."
               author="Minh Hoàng"
               role="Ca sĩ R&B"
+              avatar="/image/MinhHoang.webp"
             />
           </div>
         </div>
