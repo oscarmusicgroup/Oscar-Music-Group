@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://oscarlabel.com' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@oscarmusicgroup' },
-        { name: 'google-site-verification', content: 'YOUR_GOOGLE_SITE_VERIFICATION' },
+        { name: 'google-site-verification', content: process.env.NUXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '2hF0hnwKu0RmM_snws86JksF6i81rH9pVpmj0bhwTM4' },
         { name: 'theme-color', content: '#0a0e17' },
         { name: 'msapplication-TileColor', content: '#0a0e17' }
       ],

@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-  const baseUrl = 'https://oscarmusicgroup.vn'
+  const baseUrl = 'https://oscarlabel.com'
 
   const routes = [
     { url: '/', changefreq: 'weekly', priority: 1.0 },

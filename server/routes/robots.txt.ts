@@ -4,7 +4,7 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://oscarmusicgroup.vn/sitemap.xml
+Sitemap: https://oscarlabel.com/sitemap.xml
 
 # Google
 User-agent: Googlebot
