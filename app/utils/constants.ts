@@ -4,7 +4,7 @@
 
 export const APP_NAME = 'Oscar Music Group'
 export const APP_DESCRIPTION = 'Phân phối nhạc số toàn cầu từ Việt Nam'
-export const APP_URL = 'https://oscarmusicgroup.vn'
+export const APP_URL = 'https://oscarlabel.com'
 
 /**
  * Social Media Links
@@ -21,8 +21,8 @@ export const SOCIAL_LINKS = {
  * Contact Information
  */
 export const CONTACT_INFO = {
-  email: 'info@oscarmusicgroup.vn',
-  supportEmail: 'support@oscarmusicgroup.vn',
+  email: 'info@oscarlabel.com',
+  supportEmail: 'support@oscarlabel.com',
   phone: '+84 (0) 9 1234 5678',
   address: 'Số 9 Ngách 78 ngõ 169 đường Hoàng Mai, Phường Tương Mai, Hà Nội',
 }

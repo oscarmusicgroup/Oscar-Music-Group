@@ -6,9 +6,11 @@ export const useSeoHead = (options: {
   keywords?: string
   author?: string
   themeColor?: string
+  schema?: any
 }) => {
   const router = useRouter()
-  const baseUrl = 'https://oscarmusicgroup.vn'
+  const config = useRuntimeConfig()
+  const baseUrl = config.public.baseUrl || 'https://oscarlabel.com'
   const currentUrl = baseUrl + router.currentRoute.value.path
 
   useHead({
@@ -71,7 +73,7 @@ export const useSeoHead = (options: {
         content: options.themeColor || '#0ea5e9'
       },
       {
-        httpEquiv: 'x-ua-compatible',
+        'http-equiv': 'x-ua-compatible',
         content: 'ie=edge'
       }
     ],
@@ -80,6 +82,12 @@ export const useSeoHead = (options: {
         rel: 'canonical',
         href: options.url || currentUrl
       }
-    ]
+    ],
+    script: options.schema ? [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(options.schema)
+      }
+    ] : []
   })
 }

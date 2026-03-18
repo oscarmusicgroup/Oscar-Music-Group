@@ -608,6 +608,51 @@ definePageMeta({
 })
 
 // Combined SEO and Style configuration
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Oscar Music Group",
+  "alternateName": "OMG",
+  "legalName": "Công Ty TNHH OSCAR ENTERTAINMENT",
+  "url": "https://oscarlabel.com",
+  "logo": "https://oscarlabel.com/logo.png",
+  "description": "Nền tảng phân phối nhạc số chuyên nghiệp, giúp các nghệ sĩ độc lập phát hành nhạc lên Spotify, Apple Music, TikTok và 150+ nền tảng toàn cầu.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Số 9 Ngách 78 ngõ 169 đường Hoàng Mai, Phường Tương Mai",
+    "addressLocality": "Hà Nội",
+    "addressRegion": "Hà Nội",
+    "postalCode": "100000",
+    "addressCountry": "VN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+84-849-297-957",
+    "contactType": "customer support",
+    "email": "support@oscarlabel.com",
+    "availableLanguage": ["Vietnamese", "English"]
+  },
+  "sameAs": [
+    "https://facebook.com/oscarmusicgroup",
+    "https://discord.gg/qydQNrJD",
+    "https://instagram.com/oscarmusicgroup",
+    "https://threads.net/@oscarmusicgroup",
+    "https://tiktok.com/@oscarmusicgroup"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Oscar Music Group",
+  "url": "https://oscarlabel.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://oscarlabel.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 useHead({
   title: 'Phát Hành Nhạc Số Miễn Phí | Oscar Music Group',
   meta: [
@@ -618,6 +663,16 @@ useHead({
     { property: 'og:image', content: '/og-image.jpg' },
     { property: 'og:url', content: 'https://oscarlabel.com' },
     { name: 'twitter:card', content: 'summary_large_image' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(organizationSchema)
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(websiteSchema)
+    }
   ],
   style: [
     {
