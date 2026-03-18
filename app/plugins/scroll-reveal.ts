@@ -1,8 +1,13 @@
 export default defineNuxtPlugin((nuxtApp) => {
-  if (!process.client) return
-
+  // Register the directive on both server and client to avoid SSR errors
   nuxtApp.vueApp.directive('scroll-reveal', {
+    getSSRProps() {
+      // Return empty props for server side to avoid hydration mismatch
+      return {}
+    },
     mounted(el: HTMLElement, binding) {
+      if (!process.client) return
+      
       // Add initial hidden state
       el.classList.add('reveal-hidden')
       
@@ -36,6 +41,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       observer.observe(el)
 
       // Cleanup on unmount
+      // @ts-ignore
       el._observer = observer
     },
     unmounted(el: HTMLElement & { _observer?: IntersectionObserver }) {

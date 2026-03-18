@@ -1,18 +1,5 @@
 <template>
   <div>
-    <!-- SEO and Meta Tags -->
-    <Head>
-      <Title>Phát Hành Nhạc Số Miễn Phí| Oscar Music Group</Title>
-      <Meta name="description" content="Phát hành nhạc lên Spotify, Apple Music, TikTok và 150+ nền tảng. Dịch vụ phân phối nhạc số chuyên nghiệp tại Việt Nam từ Oscar Music Group." />
-      <Meta name="keywords" content="phát hành nhạc, Spotify, Apple Music, phân phối nhạc số, Oscar Music Group, TikTok, Zing MP3" />
-      <Meta property="og:title" content="Phát Hành Nhạc Số Miễn Phí | Oscar Music Group" />
-      <Meta property="og:description" content="Khoảng cách gần nhất tới thế giới âm nhạc. Phát hành từ Việt Nam ra toàn cầu." />
-      <Meta property="og:image" content="/og-image.jpg" />
-      <Meta property="og:url" content="https://oscarmusicgroup.vn" />
-      <Meta name="twitter:card" content="summary_large_image" />
-      <Meta name="twitter:site" content="@oscarmusicgroup" />
-    </Head>
-
     <!-- Hero Section -->
     <section class="relative overflow-hidden pt-12 md:pt-20 lg:pt-24 pb-16 md:pb-24">
       <!-- Animated Background -->
@@ -614,20 +601,27 @@
 </template>
 
 <script setup lang="ts">
-import { useHead } from '#app'
-import { ref } from 'vue'
-
 const showMore = ref(false)
 
 definePageMeta({
   layout: 'default'
 })
 
-// Add CSS for blobs animation
+// Combined SEO and Style configuration
 useHead({
+  title: 'Phát Hành Nhạc Số Miễn Phí | Oscar Music Group',
+  meta: [
+    { name: 'description', content: 'Phát hành nhạc lên Spotify, Apple Music, TikTok và 150+ nền tảng. Dịch vụ phân phối nhạc số chuyên nghiệp tại Việt Nam từ Oscar Music Group.' },
+    { name: 'keywords', content: 'phát hành nhạc, Spotify, Apple Music, phân phối nhạc số, Oscar Music Group, TikTok, Zing MP3' },
+    { property: 'og:title', content: 'Phát Hành Nhạc Số Miễn Phí | Oscar Music Group' },
+    { property: 'og:description', content: 'Khoảng cách gần nhất tới thế giới âm nhạc. Phát hành từ Việt Nam ra toàn cầu.' },
+    { property: 'og:image', content: '/og-image.jpg' },
+    { property: 'og:url', content: 'https://oscarlabel.com' },
+    { name: 'twitter:card', content: 'summary_large_image' }
+  ],
   style: [
     {
-      children: `
+      textContent: `
         @keyframes blob {
           0%, 100% { transform: translate(0, 0) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
