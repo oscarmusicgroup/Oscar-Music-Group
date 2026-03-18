@@ -60,7 +60,7 @@
           </div>
 
           <!-- Right - Video/Image -->
-          <div class="relative flex items-center justify-center min-h-[400px]">
+          <div class="hidden md:flex relative items-center justify-center min-h-[400px]">
             <!-- Wrapper isolated for Safari composite rendering -->
             <div 
               class="relative w-full aspect-video md:aspect-square flex items-center justify-center pointer-events-none mix-blend-screen"
