@@ -3,22 +3,20 @@
  */
 export default defineEventHandler(async (event) => {
   const startTime = Date.now()
-
-  // Log incoming request
+  const method = getMethod(event)
+  const query = getQuery(event)
   const requestPath = getRequestURL(event).pathname
-  const method = event.node.req.method
 
-  // Skip logging for static assets
-  if (requestPath.startsWith('/_')) return
+  // Skip logging for static assets and Nuxt internals
+  if (requestPath.startsWith('/_') || requestPath.includes('.')) return
 
-  // Perform action
-  const responseTime = Date.now() - startTime
-
-  // Log after response
-  console.log(`${method} ${requestPath} - ${responseTime}ms`)
-
-  // Add performance headers
-  if (event.node.res) {
-    event.node.res.setHeader('X-Response-Time', `${responseTime}ms`)
+  // Log request in dev
+  if (process.dev) {
+    console.log(`[Request] ${method} ${requestPath}`)
   }
+
+  // Set response time header using H3 utility
+  // We do it before the handler so it's ready, or we can use a hook
+  // In Nitro, we can use hooks if needed, but here a simple addition is fine
+  setResponseHeader(event, 'X-Server-Response-Time', `${Date.now() - startTime}ms`)
 })

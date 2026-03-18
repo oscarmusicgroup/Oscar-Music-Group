@@ -1,4 +1,6 @@
-import nodemailer from 'nodemailer'
+// Dynamic import inside handler for Node-specific modules
+// import nodemailer from 'nodemailer'
+
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
@@ -62,7 +64,8 @@ export default defineEventHandler(async (event) => {
       throw new Error('Cấu hình SMTP chưa hoàn tất trong tệp .env')
     }
 
-    // Send email to admin
+    // Send email using nodemailer with dynamic import
+    const { default: nodemailer } = await import('nodemailer')
     const transporter = nodemailer.createTransport({
       host: config.smtpHost,
       port: config.smtpPort,
